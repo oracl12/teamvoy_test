@@ -1,5 +1,7 @@
-Rails.application.routes.draw do
-  root "search_engines#index"
+# frozen_string_literal: true
 
-  post '/search', to: "search_engines#search"
+Rails.application.routes.draw do
+  root 'search_engines#index'
+
+  post '/search', to: 'search_engines#search'
 end

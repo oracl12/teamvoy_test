@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2 main modes of work:
+1. Exact search which are looking for 100% matches(doesnt support exclusion)
+2. Relevant search which allows you to write some words in incorrect way,
+    this regime supports different precisions: the less precision - the more variants will be found(supports exclusion)
 
-Things you may want to cover:
+Results are updating on any change of changable fields
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## P.S.
+I hadnt use any additional gems except gem responsible for calculating distance between words
