@@ -1,0 +1,36 @@
+<h1 class="headers"> Search engine  </h1>
+<div id="control_panel">
+    <input id="searchable_input" type="text" placeholder="Search input field">
+
+    <div>
+        <label for="precision-select">Precision: </label>
+        <select name="precision" id="precision_select">
+            <option value="0.9" selected>High precision (recomended)</option>
+            <option value="0.8">Medium precision</option>
+            <option value="0.7">Low precision</option>
+        </select>
+
+        <label for="search-type-select">Search type: </label>
+        <select name="search-type" id="search_type_select">
+            <option value="1" selected>Relative (recomended)</option>
+        <option value="0">Exact</option>
+        </select>
+    </div>
+</div>
+
+<h1 class="headers">Search results:</h1>
+
+<div id="result_container">...</div>
+
+<h1 class="headers" style="padding-bottom: 2%;">Dataset: </h1>
+
+<div id="data">
+    <% @data.each do |hash|%>
+      <div class="slot">
+        <h3><%= hash["Name"] %></h3>
+        <h4><%= hash["Type"] %></h4>
+        <h5><%= hash["Designed by"] %></h5>
+        <hr>
+      </div>
+    <% end %>
+</div>
