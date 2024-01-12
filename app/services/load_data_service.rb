@@ -6,6 +6,8 @@ class LoadDataService
   end
 
   def call
+    raise FileNotFoundException unless File.exist?(@file_path)
+
     file_contents = File.read(@file_path)
     JSON.parse(file_contents)
   end

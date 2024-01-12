@@ -25,12 +25,16 @@
 <h1 class="headers" style="padding-bottom: 2%;">Dataset: </h1>
 
 <div id="data">
-    <% @data.each do |hash|%>
-      <div class="slot">
-        <h3><%= hash["Name"] %></h3>
-        <h4><%= hash["Type"] %></h4>
-        <h5><%= hash["Designed by"] %></h5>
-        <hr>
-      </div>
+    <% if @data.nil? %>
+      <h2>We cannot find the data</h2>
+    <% else %>
+      <% @data.each do |hash|%>
+        <div class="slot">
+          <h3><%= hash["Name"] %></h3>
+          <h4><%= hash["Type"] %></h4>
+          <h5><%= hash["Designed by"] %></h5>
+          <hr>
+        </div>
+      <% end %>
     <% end %>
 </div>
